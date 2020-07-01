@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Inconsolata', monospace;
+}
+
+.btn {
+  background-color: grey;
+  padding: 15px;
+  font-size: large;
+  border: none;
+  position: absolute;
+  left: 50%;
+  margin-top: 20px;
+  /* border: solid 2px thistle; */
+}

@@ -2,16 +2,21 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: 'Inconsolata', monospace;
 }
 
 .btn {
-  background-color: grey;
+  font-family: sans-serif;
+  background-color: #bdbdbd;
   padding: 15px;
-  font-size: large;
   border: none;
-  position: absolute;
-  left: 50%;
-  margin-top: 20px;
-  /* border: solid 2px thistle; */
+  border-radius: 5px;
+  display: block;
+  margin: auto;
+  color: yellow;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease-out;
+}
+.btn:hover {
+  background-color: grey;
 }

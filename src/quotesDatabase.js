@@ -62,15 +62,15 @@ const quotes = [
   },
   {
     quote: 'Today is the tomorrow we worried about yesterday.',
-    author: '',
+    author: 'Unknown',
   },
   {
     quote: "It's easier to see the mistakes on someone else's paper.",
-    author: '',
+    author: 'Unknown',
   },
   {
     quote: 'Every man dies. Not every man really lives.',
-    author: '',
+    author: 'Unknown',
   },
   {
     quote: 'To lead people walk behind them.',
@@ -110,7 +110,7 @@ const quotes = [
   },
   {
     quote: 'The day is already blessed, find peace within it.',
-    author: '',
+    author: 'Unknown',
   },
   {
     quote: 'From error to error one discovers the entire truth.',
@@ -364,11 +364,11 @@ const quotes = [
   },
   {
     quote: 'It takes both sunshine and rain to make a rainbow.',
-    author: '',
+    author: 'Unknown',
   },
   {
     quote: 'A beautiful thing is never perfect.',
-    author: '',
+    author: 'Unknown',
   },
   {
     quote: 'Only do what your heart tells you.',
@@ -377,6 +377,15 @@ const quotes = [
   {
     quote: 'Life is movement-we breathe, we eat, we walk, we move!',
     author: 'John Pierrakos',
+  },
+  {
+    quote: 'Do no harm, but take no crap.',
+    author: 'Moïra Fowley-Doyle',
+  },
+  {
+    quote:
+      'When you talk, you are only repeating what you already know. But if you listen, you may learn something new.',
+    author: 'Dalai Lama',
   },
 ];
 export default quotes;

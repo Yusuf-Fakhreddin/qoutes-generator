@@ -2,43 +2,44 @@ import React, { Component } from 'react';
 import Database from '../quotesDatabase';
 import Quote from '../components/Quote';
 import Button from '../components/button';
-let randomNum = Math.floor(Math.random() * 100 + 1);
-console.log(randomNum);
+let randomNum = Math.floor(Math.random() * 95 + 1);
 let randomquote = Database[randomNum].quote;
-console.log(randomNum);
 let author = Database[randomNum].author;
-let firstColor = getRandomColor();
-
-function getRandomColor() {
-  var letters = '0123456789ABCDEF';
-  var color = '#';
-  for (var i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  console.log(color);
-  return color;
-}
 
 class quoteHandler extends Component {
   state = {
-    color: firstColor,
+    appear: true,
     quote: randomquote,
     auth: author,
   };
 
+  componentDidMount() {
+    this.timer = setInterval(() => this.change(), 10000);
+  }
+  componentWillUnmount() {
+    clearInterval(this.timer);
+  }
+
   change = () => {
-    let randomNum = Math.floor(Math.random() * 20 + 1);
-    console.log(randomNum);
-    this.setState({ color: getRandomColor() });
+    let randomNum = Math.floor(Math.random() * 95 + 1);
     this.setState({ quote: Database[randomNum].quote });
     this.setState({ auth: Database[randomNum].author });
   };
 
+  btnChange = () => {
+    clearInterval(this.timer);
+    let randomNum = Math.floor(Math.random() * 95 + 1);
+    this.setState({ quote: Database[randomNum].quote });
+    this.setState({ auth: Database[randomNum].author });
+    this.timer = setInterval(() => this.change(), 10000);
+  };
+
   render() {
     return (
-      <body style={{ backgroundColor: this.state.color, height: '100vh' }}>
+      <body>
         <Quote saying={this.state.quote} auth={this.state.auth} />
-        <Button clicked={this.change} color={this.state.color} />
+
+        <Button clicked={this.btnChange} />
       </body>
     );
   }
